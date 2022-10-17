@@ -20,3 +20,15 @@ Route::get('/', function () {
 Route::get('/welcome', function () {
     return "Страница приветствия";
 });
+
+Route::get('/about', function () {
+    return "О проекте";
+});
+
+Route::get('/news', function () {
+    return "Список новостей";
+});
+
+Route::get('/news/{id}', function (string $id){
+    return "Единичная новость № $id";
+});
