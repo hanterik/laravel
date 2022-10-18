@@ -1,0 +1,7 @@
+ curl -s https://laravel.build/laravel | bash
+./vendor/bin/sail up -d
+
+// отладчик
+composer require barryvdh/laravel-debugbar --dev
+php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
+
