@@ -18,17 +18,17 @@ Route::get('/', function () {
 });
 
 Route::get('/welcome', function () {
-    return "Страница приветствия";
+    return view('menu',['message' => 'Страница приветствия']);
 });
 
 Route::get('/about', function () {
-    return "О проекте";
+    return view('menu',['message' => 'О проекте']);;
 });
 
 Route::get('/news', function () {
-    return "Список новостей";
+    return view('menu',['message' => 'Список новостей']);;
 });
 
 Route::get('/news/{id}', function (string $id){
-    return "Единичная новость № $id";
+    return view('menu',['message' => 'Новость № $id']);;
 });
