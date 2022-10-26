@@ -23,7 +23,7 @@ Route::get('/admin', [AdminIndexController::class, 'index'])->name('admin.index'
 Route::get('/news', [NewsController::class, 'index'])->name('news');
 Route::get('/news/newsOne/{id}', [NewsController::class, 'show'])->name('newsOne');
 Route::get('/news/category/', [NewsController::class, 'сategory'])->name('category');
-Route::get('/news/category/{id}', [NewsController::class, 'сategoryId'])->name('categoryId');
+Route::get('/news/categoryNews/{id}', [NewsController::class, 'categoryNews'])->name('categoryNews');
 
 
 

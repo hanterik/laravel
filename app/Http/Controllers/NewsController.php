@@ -13,13 +13,17 @@ class NewsController extends Controller
     }
     public function show($id){
         $news = news::getNewsId($id);
-//        dump($news);
         return view('newsOne')->with('news', $news);
     }
-
+//список категорий
     public function сategory(){
         $category = news::getCategorys();
-//        dd($news);
         return view('category')->with('category', $category);
     }
+
+    public function categoryNews($id){
+        $categoryNews = news::getCategoryNews($id);
+        return view('categoryNews')->with('categoryNews', $categoryNews);
+    }
 }
+

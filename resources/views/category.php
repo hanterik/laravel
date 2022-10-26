@@ -4,6 +4,6 @@
 <div>
     <?php foreach ($category as $item): ?>
 
-       <li><a href="#"><?=$item['name'];?></a></li>
+       <li><a href="<?=route('categoryNews', ['id' => $item['id']])?>"><?=$item['name'];?></a></li>
     <?php endforeach;?>
 </div>
